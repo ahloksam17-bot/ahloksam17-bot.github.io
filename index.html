@@ -45,6 +45,13 @@ nav a:hover { color: #65aaff; }
     justify-content: space-between;
     gap: 50px;
 }
+.hero {
+    position: relative;
+    background:
+        radial-gradient(ellipse at 85% 25%, rgba(37, 99, 235, 0.35), transparent 45%),
+        radial-gradient(ellipse at 15% 85%, rgba(14, 165, 233, 0.22), transparent 45%),
+        linear-gradient(135deg, #080d18 0%, #0b1830 50%, #081426 100%);
+}
 
 .hero-content { max-width: 650px; }
 
@@ -235,10 +242,311 @@ footer {
 
     .timeline-dot {
         left: -31px;
-    }
+    }￥
 
     .timeline-content {
         padding: 22px;
+    }
+}
+
+.profile {box-shadow:
+        0 0 25px rgba(37, 99, 235, 0.25),
+        0 0 60px rgba(14, 165, 233, 0.12);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.profile:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 0 35px rgba(37, 99, 235, 0.4),
+        0 0 75px rgba(14, 165, 233, 0.2);
+}
+
+.button {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(37, 99, 235, 0.4);
+} 
+.about-label {
+    display: inline-block;
+    color: #60a5fa;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+
+.about-grid h3 {
+    color: #f1f5f9;
+    font-size: 23px;
+    margin-bottom: 18px;
+}
+
+.about-grid p {
+    color: #aebed2;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+@media (max-width: 700px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    margin-top: 35px;
+}
+
+.about-card {
+    background: linear-gradient(145deg, #14243d, #0c1526);
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    border-radius: 18px;
+    padding: 35px;
+    transition: all 0.35s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    border-color: #60a5fa;
+    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.2);
+}
+
+.about-card h3 {
+    color: #f1f5f9;
+    font-size: 23px;
+    margin: 12px 0 18px;
+}
+
+.about-card p {
+    color: #aebed2;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.about-icon {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 700px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.skill-category {
+    color: #65aaff;
+    font-size: 22px;
+    margin: 35px 0 18px;
+}
+
+.skill-dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-bottom: 40px;
+}
+
+.skill-card {
+    position: relative;
+    min-height: 230px;
+    padding: 28px;
+    background: linear-gradient(145deg, #17152b, #0d1020);
+    border: 1px solid rgba(65, 150, 255, 0.28);
+    border-radius: 18px;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 4px;
+    background: linear-gradient(90deg, #35d5ff, #7c3aed, transparent);
+    box-shadow: 0 0 18px #35d5ff;
+}
+
+.skill-card::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 4px;
+    height: 55%;
+    background: linear-gradient(180deg, transparent, #8b5cf6, #35d5ff);
+    box-shadow: 0 0 18px #8b5cf6;
+    opacity: 0.65;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: #8b5cf6;
+    box-shadow:
+        0 0 25px rgba(37, 99, 235, 0.4),
+        0 0 55px rgba(139, 92, 246, 0.2);
+}
+
+.skill-icon {
+    font-size: 42px;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 0 12px rgba(53, 213, 255, 0.5));
+    transition: transform 0.35s ease;
+}
+
+.skill-card:hover .skill-icon {
+    transform: scale(1.15);
+}
+
+.skill-icon {
+    font-size: 38px;
+    margin-bottom: 22px;
+}
+
+.skill-card h4 {
+    color: #f1f5f9;
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.skill-card p {
+    color: #9caec7;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+@media (max-width: 1000px) {
+    .skill-dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .skill-dashboard {
+        grid-template-columns: 1fr;
+    }
+}
+.contact-section {
+    padding: 100px 10%;
+    text-align: center;
+    position: relative;
+}
+
+.contact-box {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    padding: 75px 40px;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.18), transparent 55%),
+        linear-gradient(135deg, #101426, #111b35, #17112d);
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow:
+        0 0 35px rgba(37, 99, 235, 0.12),
+        inset 0 0 30px rgba(139, 92, 246, 0.04);
+}
+
+.contact-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #38bdf8,
+        #8b5cf6,
+        transparent
+    );
+    box-shadow: 0 0 18px #38bdf8;
+}
+
+.contact-label {
+    color: #60a5fa;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.contact-box h2 {
+    color: #f1f5f9;
+    font-size: 48px;
+    margin: 22px 0;
+}
+
+.contact-box h2 span {
+    color: #60a5fa;
+    text-shadow: 0 0 18px rgba(96, 165, 250, 0.7);
+}
+
+.contact-box p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #a8bad1;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.contact-email {
+    color: #bfdbfe;
+    margin: 15px 0;
+    font-size: 17px;
+}
+
+.contact-button {
+    display: inline-block;
+    margin: 12px 8px 0;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    box-shadow: 0 0 22px rgba(59, 130, 246, 0.25);
+    transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.55);
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+    .contact-section {
+        padding: 70px 6%;
+    }
+
+    .contact-box {
+        padding: 50px 22px;
+    }
+
+    .contact-box h2 {
+        font-size: 34px;
+    }
+
+    .contact-box p {
+        font-size: 15px;
+    }
+
+    .contact-button {
+        display: block;
+        margin: 14px auto;
+        max-width: 240px;
     }
 }
 
@@ -285,19 +593,39 @@ footer {
 <section id="about">
     <h2 class="section-title">About Me</h2>
 
-    <p class="description">
-        My background focuses on business operations,
-        team coordination and management.
+    <div class="about-grid">
 
-        I am interested in how Artificial Intelligence
-        and digital technologies can improve workflows,
-        increase productivity and support better
-        business decisions.
+        <div class="about-card">
+            <div class="about-icon">💼</div>
 
-        I am continuously learning, exploring new AI tools
-        and developing practical projects to expand my
-        knowledge in AI Operations & Management.
-    </p>
+            <span class="about-label">MY BACKGROUND</span>
+
+            <h3>Business Operations & Team Management</h3>
+
+            <p>
+                I have professional experience across food and beverage,
+                the property industry and business operations. My background
+                has helped me develop skills in team coordination, customer
+                relations, communication and daily operational management.
+            </p>
+        </div>
+
+        <div class="about-card">
+            <div class="about-icon">🚀</div>
+
+            <span class="about-label">MY DIRECTION</span>
+
+            <h3>Exploring AI & Digital Innovation</h3>
+
+            <p>
+                I am interested in how Artificial Intelligence and digital
+                tools can improve workflows and business productivity.
+                I am currently learning, exploring practical AI applications
+                and building my knowledge in AI Operations & Management.
+            </p>
+        </div>
+
+    </div>
 </section>
 
 <section id="experience">
@@ -352,21 +680,73 @@ footer {
     <h2 class="section-title">My Skills</h2>
 
     <h3 class="skill-category">Business & Management</h3>
-    <div class="skills">
-        <span class="skill">Leadership</span>
-        <span class="skill">Team Management</span>
-        <span class="skill">Business Operations</span>
-        <span class="skill">Communication</span>
-        <span class="skill">Team Coordination</span>
-        <span class="skill">Problem Solving</span>
+    <div class="skill-dashboard">
+
+        <div class="skill-card">
+            <div class="skill-icon">👑</div>
+            <h4>Leadership</h4>
+            <p>Team leadership and people coordination</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">👥</div>
+            <h4>Team Management</h4>
+            <p>Supporting teams and daily operations</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">⚙️</div>
+            <h4>Business Operations</h4>
+            <p>Operational coordination and workflow improvement</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">💬</div>
+            <h4>Communication</h4>
+            <p>Clear communication and customer relations</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">🤝</div>
+            <h4>Team Coordination</h4>
+            <p>Organizing tasks and working with teams</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">🧩</div>
+            <h4>Problem Solving</h4>
+            <p>Identifying issues and finding practical solutions</p>
+        </div>
+
     </div>
 
     <h3 class="skill-category">AI & Digital Learning</h3>
-    <div class="skills">
-        <span class="skill">AI Tools</span>
-        <span class="skill">AI Workflow Exploration</span>
-        <span class="skill">Digital Innovation</span>
-        <span class="skill">Continuous Learning</span>
+    <div class="skill-dashboard">
+
+        <div class="skill-card">
+            <div class="skill-icon">🤖</div>
+            <h4>AI Tools</h4>
+            <p>Exploring practical AI applications</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">🔍</div>
+            <h4>AI Workflow Exploration</h4>
+            <p>Learning how AI can improve workflows</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">💡</div>
+            <h4>Digital Innovation</h4>
+            <p>Exploring useful digital solutions</p>
+        </div>
+
+        <div class="skill-card">
+            <div class="skill-icon">🚀</div>
+            <h4>Continuous Learning</h4>
+            <p>Building knowledge in AI and technology</p>
+        </div>
+
     </div>
 </section>
 
@@ -386,13 +766,40 @@ footer {
     </div>
 </section>
 
-<section id="contact">
-    <h2 class="section-title">Let's Connect</h2>
-    <p class="description">
-        Interested in AI, technology and new opportunities?
-        Feel free to contact me.
-    </p>
-    <a class="button" href="mailto:ahloksam17@gmail.com">Contact Me</a>
+<section id="contact" class="contact-section">
+    <div class="contact-box">
+
+        <span class="contact-label">GET IN TOUCH</span>
+
+        <h2>Let's Connect<span>.</span></h2>
+
+        <p>
+            Interested in AI, technology and new opportunities?
+            I'm always open to meaningful conversations,
+            collaborations and new possibilities.
+        </p>
+
+        <div class="contact-email">
+            ✉ ahloksam17@gmail.com
+        </div>
+
+        <div class="contact-email">
+            ☎ +60 14-610 1871
+        </div>
+
+        <a class="contact-button"
+           href="mailto:ahloksam17@gmail.com">
+            Send Me an Email →
+        </a>
+
+        <a class="contact-button"
+           href="https://wa.me/60146101871"
+           target="_blank"
+           rel="noopener noreferrer">
+            Chat on WhatsApp →
+        </a>
+
+    </div>
 </section>
 
 </main>
