@@ -549,6 +549,136 @@ footer {
         max-width: 240px;
     }
 }
+/* ===== PROJECT SHOWCASE ===== */
+
+#projects {
+    padding: 100px 10%;
+}
+
+#projects .cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 45px;
+    align-items: stretch;
+}
+
+#projects .card {
+    position: relative;
+    padding: 0 25px 30px;
+    overflow: hidden;
+    background: linear-gradient(
+        145deg,
+        rgba(20, 30, 55, 0.95),
+        rgba(13, 17, 35, 0.98)
+    );
+    border: 1px solid rgba(96, 165, 250, 0.2);
+    border-radius: 20px;
+    transition: all 0.35s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+#projects .card::before {
+    content: "";
+    display: block;
+    height: 150px;
+    margin: 0 -25px 25px;
+    background:
+        radial-gradient(circle at 50% 50%,
+            rgba(59, 130, 246, 0.4),
+            transparent 55%),
+        linear-gradient(135deg, #172d55, #21183f);
+    border-bottom: 1px solid rgba(96, 165, 250, 0.2);
+}
+
+#projects .card:nth-child(1)::before {
+    content: "</>";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #60c8ff;
+    font-size: 48px;
+    font-weight: 800;
+    text-shadow: 0 0 25px #2563eb;
+}
+
+#projects .card:nth-child(2)::before {
+    content: "✧ AI ✧";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c4a5ff;
+    font-size: 40px;
+    font-weight: 800;
+    text-shadow: 0 0 25px #8b5cf6;
+    background:
+        radial-gradient(circle at center,
+            rgba(139, 92, 246, 0.4),
+            transparent 60%),
+        linear-gradient(135deg, #171b42, #291b4c);
+}
+
+#projects .card:nth-child(3)::before {
+    content: "⚙ PYTHON";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #67e8f9;
+    font-size: 30px;
+    font-weight: 800;
+    text-shadow: 0 0 25px #06b6d4;
+    background:
+        radial-gradient(circle at center,
+            rgba(6, 182, 212, 0.35),
+            transparent 60%),
+        linear-gradient(135deg, #102d43, #171b42);
+}
+
+#projects .card h3 {
+    color: #f1f5f9;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+#projects .card p {
+    color: #a9bad2;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+#projects .card strong {
+    color: #60a5fa;
+}
+
+#projects .card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(96, 165, 250, 0.7);
+    box-shadow:
+        0 15px 40px rgba(37, 99, 235, 0.2),
+        0 0 25px rgba(139, 92, 246, 0.12);
+}
+
+/* Responsive Layout */
+
+@media (max-width: 900px) {
+    #projects .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    #projects {
+        padding: 70px 6%;
+    }
+
+    #projects .cards {
+        grid-template-columns: 1fr;
+    }
+
+    #projects .card::before {
+        height: 130px;
+    }
+}
 
 </style>
 </head>
@@ -752,17 +882,40 @@ footer {
 
 <section id="projects">
     <h2 class="section-title">My Projects</h2>
+
     <div class="cards">
+
         <div class="card">
             <h3>Personal Portfolio Website</h3>
-            <p>A personal website built with HTML and CSS using AI-assisted development.</p>
-            <p>Technology: HTML, CSS</p>
+            <p>
+                Designed and built a personal portfolio website
+                using HTML and CSS with AI-assisted development.
+            </p>
+            <p><strong>Technology:</strong> HTML, CSS, GitHub Pages</p>
         </div>
+
         <div class="card">
             <h3>AI Learning Journey</h3>
-            <p>Exploring practical AI applications and opportunities to improve business productivity.</p>
-            <p>Status: In Progress</p>
+            <p>
+                Exploring practical AI applications and
+                opportunities to improve business productivity
+                through digital innovation.
+            </p>
+            <p><strong>Status:</strong> In Progress</p>
         </div>
+
+        <div class="card">
+            <h3>Python Browser Automation</h3>
+            <p>
+                Gained practical experience executing existing
+                Python-based browser automation scripts,
+                adjusting configurations and exploring
+                automated browser workflows.
+            </p>
+            <p><strong>Technology:</strong> Python, Browser Automation</p>
+            <p><strong>Role:</strong> Script Execution & Configuration</p>
+        </div>
+
     </div>
 </section>
 
